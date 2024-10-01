@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+.container {
+  padding: 1.25rem 2rem;
+  font-size: small;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.container > div {
+  display: flex;
+  position: relative;
+  gap: 1rem;
+}
+
+.container > div::after {
+  content: "";
+  position: absolute;
+  transform: translateY(-1.75rem);
+  top: 0;
+  background-color: black;
+  width: 100%;
+  height: 1px;
+}
+
+.container > div:nth-child(1)::after {
+  display: none;
+}
+
+.container > div > h2 {
+  font-style: italic;
+  width: 30%;
+}
+
+.container > div > div {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.container > * > div > * {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
